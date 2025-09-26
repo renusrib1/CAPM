@@ -1,0 +1,189 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt">
+
+    <Page id="page">
+
+        <tnt:ToolHeader id="shellLikeToolHeader" class="sapUiTinyMargin">
+            <Button id="_IDGenButton" icon="sap-icon://menu2" type="Transparent" tooltip="Menu" press=".onCollapseExpandPress" />
+            <Image id="_IDGenImage" src="test-resources/sap/tnt/images/SAP_Logo.png" decorative="false" tooltip="SAP Logo" width="60px" height="30px" />
+            <Title id="_IDGenTitle" text="Product Name" wrapping="false" />
+            <Text id="_IDGenText" text="Second title" wrapping="false" />
+            <ToolbarSpacer id="_IDGenToolbarSpacer" />
+            <SearchField id="_IDGenSearchField" width="25rem" />
+            <Button id="_IDGenButton1" visible="false" icon="sap-icon://search" type="Transparent" tooltip="Search" />
+            <OverflowToolbarButton id="_IDGenOverflowToolbarButton" icon="sap-icon://da" type="Transparent" tooltip="Joule" text="Joule" />
+            <OverflowToolbarButton id="_IDGenOverflowToolbarButton1" icon="sap-icon://source-code" type="Transparent" tooltip="Action 1" text="Action 1" />
+            <OverflowToolbarButton id="_IDGenOverflowToolbarButton2" icon="sap-icon://card" type="Transparent" tooltip="Action 2" text="Action 2" />
+            <OverflowToolbarButton id="_IDGenOverflowToolbarButton3" icon="sap-icon://action-settings" type="Transparent" text="Settings" />
+            <Button id="_IDGenButton2" icon="sap-icon://bell" type="Transparent" tooltip="Notification" />
+            <tnt:ToolHeaderUtilitySeparator id="_IDGenToolHeaderUtilitySeparator" />
+            <OverflowToolbarButton id="_IDGenOverflowToolbarButton4" icon="sap-icon://grid" type="Transparent" text="My Products" tooltip="My Products" />
+            <Avatar id="_IDGenAvatar" src="test-resources/sap/tnt/images/Woman_avatar_01.png" displaySize="XS" tooltip="Profile" press=".onAvatarPressed" />
+        </tnt:ToolHeader>
+
+        <HBox id="_IDGenHBox">
+            <VBox id="_IDGenVBox">
+                <tnt:SideNavigation id="sideNavigation" selectedKey="walked" expanded="true">
+                    <tnt:NavigationList id="_IDGenNavigationList">
+                        <tnt:NavigationListItem id="_IDGenNavigationListItem" text="Home" icon="sap-icon://home" />
+                        <tnt:NavigationListGroup id="_IDGenNavigationListGroup" text="New">
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem1" text="Add Books" icon="sap-icon://people-connected" press=".onBookPressed"/>
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem2" text="Building" icon="sap-icon://building">
+                                <tnt:NavigationListItem id="_IDGenNavigationListItem3" text="Office 01" />
+                                <tnt:NavigationListItem id="_IDGenNavigationListItem4" text="Office 02" />
+                            </tnt:NavigationListItem>
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem5" text="Mileage" icon="sap-icon://mileage">
+                                <tnt:NavigationListItem id="_IDGenNavigationListItem6" text="Driven" />
+                                <tnt:NavigationListItem text="Walked" id="walked"/>
+                            </tnt:NavigationListItem>
+                        </tnt:NavigationListGroup>
+                        <tnt:NavigationListGroup id="_IDGenNavigationListGroup1" text="Recently used">
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem7" text="View Books" icon="sap-icon://kpi-managing-my-area" press=".onViewDetailsAddBookPress"/>
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem8" text="Flight" icon="sap-icon://flight" />
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem9" text="Map" icon="sap-icon://map-2" />
+                        </tnt:NavigationListGroup>
+                        <tnt:NavigationListGroup id="_IDGenNavigationListGroup2" text="Restricted" enabled="false">
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem10" text="Running" icon="sap-icon://physical-activity" />
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem11" text="Scissors" icon="sap-icon://scissors" />
+                        </tnt:NavigationListGroup>
+                        <tnt:NavigationListItem id="_IDGenNavigationListItem12" text="Transport" icon="sap-icon://passenger-train" />
+                    </tnt:NavigationList>
+
+                    <tnt:fixedItem>
+                        <tnt:NavigationList id="_IDGenNavigationList1">
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem13" text="Bar Chart" icon="sap-icon://bar-chart" />
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem14" selectable="false" href="https://sap.com" target="_blank" text="External Link" icon="sap-icon://attachment" />
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem15" selectable="false" href="https://sap.com" target="_top" text="External Link _top" icon="sap-icon://attachment" />
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem16" text="Compare" icon="sap-icon://compare" />
+                        </tnt:NavigationList>
+                    </tnt:fixedItem>
+                </tnt:SideNavigation>
+            </VBox>
+
+            <VBox id="_IDGenVBox1">
+                <Panel id="Panel1" class="sapUiResponsiveMargin" accessibleRole="Region" width="60rem" visible="false">
+                    <headerToolbar>
+                        <OverflowToolbar id="_IDGenOverflowToolbar">
+                            <Title id="_IDGenTitle1" text="Add new item"/>
+                        </OverflowToolbar>
+                    </headerToolbar>
+
+                    <Breadcrumbs id="_IDGenBreadcrumbs" currentLocationText="Add New Items">
+                        <Link id="_IDGenLink" text="Master"/>
+                    </Breadcrumbs>
+
+                    <HBox id="_IDGenHBox1">
+                        <VBox id="_IDGenVBox2">
+                            <Label id="_IDGenLabel" text="Title"/>
+                            <Input id="title" placeholder="Enter title"/>
+                        </VBox>
+                        <VBox id="_IDGenVBox3">
+                            <Label id="_IDGenLabel1" text="Author"/>
+                            <Input id="author" placeholder="Enter author"/>
+                        </VBox>
+                        <VBox id="_IDGenVBox4">
+                            <Label id="_IDGenLabel2" text="Price"/>
+                            <Input id="price" placeholder="Enter price"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox id="_IDGenHBox2">
+                        <VBox id="_IDGenVBox5">
+                            <Label id="_IDGenLabel3" text="Stock"/>
+                            <Input id="stock" placeholder="Enter stock"/>
+                        </VBox>
+                        <VBox id="_IDGenVBox6">
+                            <Label id="_IDGenLabel4" text="Location"/>
+                            <Input id="location" placeholder="Enter location"/>
+                        </VBox>
+                        <VBox id="_IDGenVBox7">
+                            <Label id="_IDGenLabel5" text="Gender"/>
+                            <Input id="gender" placeholder="Enter gender"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox id="_IDGenHBox3">
+                        <Button id="_IDGenButton3" text="Submit" press="submit"/>
+                    </HBox>
+                </Panel>
+
+                <Panel id="Panel2" headerText="Book Details" visible="false" class="sapUiResponsiveMargin">
+                    <Table id="bookTable" items="{/Books}">
+                        <columns>
+                            <Column id="_IDGenColumn1"><Text id="_IDGenText1" text="Title"/></Column>
+                            <Column id="_IDGenColumn2"><Text id="_IDGenText2" text="Author"/></Column>
+                            <Column id="_IDGenColumn3"><Text id="_IDGenText3" text="Price"/></Column>
+                            <Column id="_IDGenColumn4"><Text id="_IDGenText4" text="Stock"/></Column>
+                            <Column id="_IDGenColumn5"><Text id="_IDGenText5" text="Gender"/></Column>
+                            <Column id="_IDGenColumn6"><Text id="_IDGenText6" text="Actions"/></Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem id="_IDGenColumnListItem">
+                                <cells>
+                                    <Text id="_IDGenText7" text="{title}" />
+                                    <Text id="_IDGenText8" text="{author}" />
+                                    <Text id="_IDGenText9" text="{price}" />
+                                    <Text id="_IDGenText10" text="{stock}" />
+                                    <Text id="_IDGenText11" text="{gender}" />
+                                    <Button id="_IDGenButton6" text="..." press="onActionPressed"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </Panel>
+                <Panel id="Panel3" class="sapUiResponsiveMargin" accessibleRole="Region" width="60rem" visible="false">
+                    <headerToolbar>
+                        <OverflowToolbar id="_IDGenOverlowToolbar">
+                            <Title id="_IDGenTtle1" text="Add new item"/>
+                        </OverflowToolbar>
+                    </headerToolbar>
+
+                    <Breadcrumbs id="_IDGenBreadcrubs" currentLocationText="Add New Items">
+                        <Link id="_IDGenLnk" text="Master"/>
+                    </Breadcrumbs>
+
+                    <HBox id="_IDGenHBx1">
+                        <VBox id="_DGenVBx2">
+                            <Label id="_IDGLabel" text="Title"/>
+                            <Input id="itemCode" placeholder="Enter title" editable="false"/>
+                        </VBox>
+                        <VBox id="_IDGenVBx2">
+                            <Label id="_IDGnLabel" text="Title"/>
+                            <Input id="ttle" placeholder="Enter title"/>
+                        </VBox>
+                        <VBox id="_IDGenVox3">
+                            <Label id="_IDenLabel1" text="Author"/>
+                            <Input id="authr" placeholder="Enter author"/>
+                        </VBox>
+                        <VBox id="_IDGenVBx4">
+                            <Label id="_IDGnLabel2" text="Price"/>
+                            <Input id="ice" placeholder="Enter price"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox id="_IDGnHBox2">
+                        <VBox id="_IDGenVBx5">
+                            <Label id="_IDGnLabel3" text="Stock"/>
+                            <Input id="stok" placeholder="Enter stock"/>
+                        </VBox>
+                        <VBox id="_IDGenVBx6">
+                            <Label id="_IDGenLbel4" text="Location"/>
+                            <Input id="locaton" placeholder="Enter location"/>
+                        </VBox>
+                        <VBox id="_IDGeVBox7">
+                            <Label id="_IDenLabel5" text="Gender"/>
+                            <Input id="geder" placeholder="Enter gender"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox id="_IDGenBox3">
+                        <Button id="_IDGenutton3" text="Submit" press="submit"/>
+                    </HBox>
+                </Panel>
+            </VBox>
+        </HBox>
+    </Page>
+</mvc:View>

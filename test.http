@@ -1,0 +1,37 @@
+###
+#
+# Browse Books
+#
+GET http://localhost:4004/odata/v4/catalog/Books
+###
+
+GET http://localhost:4004/odata/v4/catalog/Books(31f2ef6b-bb5f-4f0f-9c9a-7f9e8a0c2103)
+
+###insert a new book
+POST http://localhost:4004/odata/v4/catalog/Books
+Content-Type: application/json
+
+{
+    "title":"fols on top floor",
+    "author":"kishore",
+    "price":22334,
+    "stock":4
+}
+
+###update a book
+Patch http://localhost:4004/odata/v4/catalog/Books(5e7c0d32-3d3f-4a89-9d3a-1a2b3c4d5102)
+Content-Type: application/json
+
+{
+    "title":"atomci",
+    "author":"renu",
+    "price":22334,
+    "stock":4
+}
+
+###
+GET http://localhost:4004/odata/v4/catalog/Books(5e7c0d32-3d3f-4a89-9d3a-1a2b3c4d5102)
+
+
+###
+DELETE http://localhost:4004/odata/v4/catalog/Books(5e7c0d32-3d3f-4a89-9d3a-1a2b3c4d5102)
